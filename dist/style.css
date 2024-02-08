@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Fraunces:700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,700);
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--cream-bg);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 69.375rem);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+h2 {
+  letter-spacing: 5px;
+  line-height: 1.25;
+  font-size: 0.75rem;
+}
+
+h3 {
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 0.875rem;
+}
+
+:root {
+  --dark-purple: hsl(273, 85%, 13%);
+  --light-green: hsl(150, 100%, 63%);
+  --davys-grey: hsl(271, 12%, 34%);
+  --ghost-white: hsl(276, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+  --aurometal-saurus: hsl(228, 12%, 48%);
+  --gunmetal-color: hsl(212, 21%, 14%);
+  --deep-aquamarine: hsl(158, 36%, 37%);
+  --cream-bg: hsl(30, 38%, 92%);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.875rem 0.9375rem;
+  background-color: var(--light-green);
+  color: var(--dark-purple);
+  border: 1px solid var(--light-green);
+  font-size: clamp(1rem, 0.9362244898rem + 0.2721088435vw, 1.125rem);
+  transition: all 0.25s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--dark-purple);
+  color: var(--light-green);
+  border: 1px solid var(--light-green);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 24.99875em) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 1.75rem;
+  }
+}
+.hero__wrapper {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.625rem;
+}
+@media (max-width: 24.99875em) {
+  .hero__wrapper {
+    flex-direction: column;
+  }
+}
+.hero__image {
+  background-image: url(../images/image-product-desktop.jpg);
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  width: 18.75rem;
+  height: auto;
+  background-size: cover;
+}
+@media (max-width: 24.99875em) {
+  .hero__image {
+    background-image: url(../images/image-product-mobile.jpg);
+    width: auto;
+    height: 15rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    border-bottom-left-radius: 0;
+  }
+}
+.hero__content {
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+}
+@media (max-width: 24.99875em) {
+  .hero__content {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.625rem;
+    padding: 1.5rem;
+  }
+}
+.hero__content-subtitle {
+  color: var(--aurometal-saurus);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 24.99875em) {
+  .hero__content-subtitle {
+    margin-bottom: 0.75rem;
+  }
+}
+.hero__content-title {
+  max-width: 10ch;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 24.99875em) {
+  .hero__content-title {
+    max-width: 14ch;
+    margin-bottom: 1rem;
+  }
+}
+.hero__content-paragraph {
+  color: var(--aurometal-saurus);
+  max-width: 26ch;
+  margin-bottom: 1.8125rem;
+}
+@media (max-width: 24.99875em) {
+  .hero__content-paragraph {
+    margin-bottom: 1.5rem;
+    max-width: 30ch;
+  }
+}
+.hero__content-prices {
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 24.99875em) {
+  .hero__content-prices {
+    margin-bottom: 1.25rem;
+  }
+}
+.hero__content-prices .price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--deep-aquamarine);
+  margin-right: 1.1875rem;
+}
+.hero__content-prices .discount {
+  display: inline-block;
+  color: var(--aurometal-saurus);
+  text-decoration: line-through;
+}
+.hero__content-button {
+  line-height: 1.2;
+  font-weight: 700;
+  background-color: var(--deep-aquamarine);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  padding: 0.9375rem 0;
+  border-radius: 0.5rem;
+  background-image: url(../images/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 20% center;
+}
+@media (max-width: 24.99875em) {
+  .hero__content-button {
+    background-position: 25% center;
+  }
+}
